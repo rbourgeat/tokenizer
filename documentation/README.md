@@ -43,6 +43,4 @@ Now deploy your contract with the following command:
 npx hardhat run --network sepolia ../deployment/deploy.js
 ```
 
-> Info: With this command we use Sepolia network for test (you can get free speolia ETH [here](https://www.infura.io/faucet/sepolia) every 24h) but you can change network for network using real money.
-
-## Verify
+> Info: With this command we use Sepolia network for test (you can get free speolia ETH [here](https://www.infura.io/faucet/sepolia) every 24h) but you can change network for using real money.

@@ -16,7 +16,7 @@ async function main() {
     console.log("Token address:", token_address);
 
     if (networkName === "sepolia") {
-      console.log("Info: ", "https://sepolia.etherscan.io/address/" + token_address);
+      console.log("Verify contract: ", "https://sepolia.etherscan.io/address/" + token_address);
     }
 
   }

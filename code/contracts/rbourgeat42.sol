@@ -23,6 +23,11 @@ interface IBEP20 {
   function name() external view returns (string memory);
 
   /**
+  * @dev Returns the token description.
+  */
+  function description() external view returns (string memory);
+
+  /**
    * @dev Returns the bep token owner.
    */
   function getOwner() external view returns (address);
@@ -348,10 +353,12 @@ contract rbourgeat42 is Context, IBEP20, Ownable {
   uint8 private _decimals;
   string private _symbol;
   string private _name;
+  string private _description;
 
   constructor() {
     _name = "rbourgeat42";
     _symbol = "R42";
+    _description = "Hello World !";
     _decimals = 18;
     _totalSupply = 1000000000000000;
     _balances[msg.sender] = _totalSupply;
@@ -385,6 +392,13 @@ contract rbourgeat42 is Context, IBEP20, Ownable {
   */
   function name() external view returns (string memory) {
     return _name;
+  }
+
+  /**
+  * @dev Returns the token description.
+  */
+  function description() external view returns (string memory) {
+    return _description;
   }
 
   /**
