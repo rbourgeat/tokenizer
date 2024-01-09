@@ -47,6 +47,16 @@ npx hardhat run --network sepolia ../deployment/deploy.js
 
 > Info: With this command we use Sepolia network for test (you can get free speolia ETH [here](https://www.infura.io/faucet/sepolia) every 24h) but you can change network for using real money.
 
+## Interact
+
+You can interact with your contract. For example you can edit description with the following command:
+
+> Info: edit the `contractAddress` and `newDescription` variables in the top of the `deployment/edit_description.js` script before.
+
+```bash
+npx hardhat run ../deployment/edit_description.js --network sepolia
+```
+
 ## (bonus) Multisig
 
 You can add a multisignature system to your token, see the `code/contracts/rbourgeat42bonus.sol` and use the `deployment/deploy_multisig.js`

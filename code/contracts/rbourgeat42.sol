@@ -95,6 +95,9 @@ interface IBEP20 {
    * a call to {approve}. `value` is the new allowance.
    */
   event Approval(address indexed owner, address indexed spender, uint256 value);
+
+  // Event emitted when the description is updated
+  event DescriptionUpdated(string newDescription);
 }
 
 /*
@@ -603,5 +606,14 @@ contract rbourgeat42 is Context, IBEP20, Ownable {
   function _burnFrom(address account, uint256 amount) internal {
     _burn(account, amount);
     _approve(account, _msgSender(), _allowances[account][_msgSender()].sub(amount, "BEP20: burn amount exceeds allowance"));
+  }
+
+  /**
+    * @dev Updates the token description.
+    * Can only be called by the owner.
+    */
+  function updateDescription(string memory newDescription) external onlyOwner {
+      _description = newDescription;
+      emit DescriptionUpdated(newDescription);
   }
 }
