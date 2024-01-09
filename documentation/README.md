@@ -1,6 +1,8 @@
 # Tokenizer
 
-Create, compile, deploy an verify your own Smart Contract with Hardhat !
+> Create, compile, deploy an verify your own Smart Contract with Hardhat !
+
+In this project we are going to use Hardhat for create token on the blockchain because it's easy (2 commands) and it use javascript (a common language) and solidity (close to js).
 
 ## Pre-requisites
 
@@ -44,3 +46,7 @@ npx hardhat run --network sepolia ../deployment/deploy.js
 ```
 
 > Info: With this command we use Sepolia network for test (you can get free speolia ETH [here](https://www.infura.io/faucet/sepolia) every 24h) but you can change network for using real money.
+
+## (bonus) Multisig
+
+You can add a multisignature system to your token, see the `code/contracts/rbourgeat42bonus.sol` and use the `deployment/deploy_multisig.js`
