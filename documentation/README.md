@@ -60,3 +60,9 @@ npx hardhat run ../deployment/edit_description.js --network sepolia
 ## (bonus) Multisig
 
 You can add a multisignature system to your token, see the `code/contracts/rbourgeat42bonus.sol` and use the `deployment/deploy_multisig.js`
+
+Edit the owners by modify owners address in the script (dont forget to edit the `requiredSignatures` number).
+
+```bash
+npx hardhat run ../deployment/deploy_multisig.js --network sepolia
+```
