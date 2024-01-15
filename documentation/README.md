@@ -63,6 +63,8 @@ You can add a multisignature system to your token, see the `code/contracts/rbour
 
 Edit the owners by modify owners address in the script (dont forget to edit the `requiredSignatures` number).
 
+> Info: A multisig (multi-signature) smart contract is a type of smart contract on a blockchain that requires multiple private keys to authorize and execute a transaction.
+
 ```bash
 npx hardhat run ../deployment/deploy_multisig.js --network sepolia
 ```
